@@ -5,7 +5,7 @@ BUILD_DIR = build
 CC = c++
 CFLAGS = -std=c++98 -Wall -Wextra -Werror
 
-SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp
+SRCS = main.cpp Animal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp
 OBJS = $(addprefix $(BUILD_DIR)/, $(notdir $(SRCS:.cpp=.o)))
 
 RM = rm -f

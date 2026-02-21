@@ -27,3 +27,7 @@ Dog& Dog::operator=(const Dog& other) {
 void Dog::makeSound() const {
 	std::cout << "Woof!" << std::endl;
 }
+
+Brain* Dog::getBrain() {
+	return this->_brain;
+}

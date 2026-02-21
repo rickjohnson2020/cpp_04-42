@@ -4,39 +4,25 @@
 #include "./Cat.hpp"
 #include "./WrongCat.hpp"
 
-
 int main() {
-	const Animal* meta = new Animal();
-	const Animal* j = new Dog();
-	const Animal* i = new Cat();
+	const int N = 10;
+	const Animal* animal[N];
 
-	std::cout << "Dog type: " << j->getType() << " " << std::endl;
-	std::cout << "Cat type: " << i->getType() << " " << std::endl;
+	for (int i = 0; i < N; i++) {
+		if (i < N / 2)
+			animal[i] = new Dog;
+		else
+			animal[i] = new Cat;
+	}
+	
+	std::cout << "=================" << std::endl;
 
-	std::cout << "Cat makes sound: ";
-	i->makeSound();
+	Dog* dog = new Dog();
+	dog->getBrain()->setIdea(0, "I want to be a cat!");
 
-	std::cout << "Dog makes sound: ";
-	j->makeSound();
+	Cat* cat = new Cat();
+	cat->getBrain()->setIdea(0, "I want to be a dog!");
 
-	std::cout << "Animal makes sound: ";
-	meta->makeSound();
-
-	std::cout << "=============================" << std::endl;
-
-	const WrongAnimal* wrongMeta = new WrongAnimal();
-	const WrongAnimal* k = new WrongCat();
-
-	std::cout << "WrongCat type: " << k->getType() << " " << std::endl;
-	std::cout << "WrongCat makes sound: ";
-	k->makeSound();
-
-	delete meta;
-	delete j;
-	delete i;
-
-	delete wrongMeta;
-	delete k;
 
 	return 0;
 }

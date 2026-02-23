@@ -26,7 +26,7 @@ Brain& Brain::operator=(const Brain& other) {
 	return *this;
 }
 
-const std::string& Brain::getIdea(int i) const {
+std::string Brain::getIdea(int i) {
 	if (i < 0 || i >= 100) {
 		std::cerr << "Index out of range" << std::endl;
 		return "";

@@ -16,7 +16,6 @@ public:
 
 	void makeSound() const;
 	Brain* getBrain();
-	// void setBrain(const Brain& brain);
 };
 
 #endif
